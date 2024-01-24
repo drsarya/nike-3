@@ -12,8 +12,13 @@ struct Screen2: View {
     let valueLoading: CGFloat = 20
     
     var body: some View {
-    
+        
         ZStack  {
+            Rectangle()
+                .foregroundColor(.black)
+                .opacity(0.50)
+            
+
             Screen2BackgroundImage()
             Screen2ImageGradient()
             VStack ( spacing: 5){
@@ -22,8 +27,8 @@ struct Screen2: View {
                 HStack {
                     Screen2ActionButton(text: "Get started")
                 }
-                .padding(.top, 500)
-            }
+                .padding(.top, 550)
+            }2
             .frame(width: 400, height: 900, alignment: .top)
             .padding(.top, 80)
         }
