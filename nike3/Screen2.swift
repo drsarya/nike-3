@@ -8,17 +8,26 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct Screen2: View {
+    
+    
     var body: some View {
+//         TabView {
+//             Text("First")
+//             Text("Second")
+//             Text("Third")
+//             Text("Fourth")
+//         }
+         //.tabViewStyle(.page)
+        
         ZStack  {
-            BackgroundImage()
-            ImageGradient()
+            Screen2BackgroundImage()
+            Screen2ImageGradient()
             VStack ( spacing: 5){
-                AppIcon()
-                AppText()
+
+                Screen2AppText()
                 HStack {
-                    ActionButton(text: "Join Us")
-                    ActionButton(text: "Sign in")
+                    Screen2ActionButton(text: "Get started")
                 }
                 .padding(.top, 40)
             }.padding(.top, 300)
@@ -26,13 +35,13 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Screen2_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
 
-struct BackgroundImage: View {
+struct Screen2BackgroundImage: View {
     var body: some View {
         Image("screen2.2")
             .resizable()
@@ -41,7 +50,7 @@ struct BackgroundImage: View {
     }
 }
 
-struct ActionButton: View {
+struct Screen2ActionButton: View {
     var text: String
     var body: some View {
         Button(action: {}) {
@@ -56,9 +65,9 @@ struct ActionButton: View {
     }
 }
 
-struct AppText: View {
+struct Screen2AppText: View {
     var body: some View {
-        Text("Nike App\nBringing Nike the best products, inspiration and stories in sport.")
+            Text("To personalize your\nexperience and \nconnect you to sport, we've got a few \nquestions for you.")
             .foregroundColor(.white)
             .font(.largeTitle)
             .bold()
@@ -66,7 +75,7 @@ struct AppText: View {
     }
 }
 
-struct ImageGradient: View {
+struct Screen2ImageGradient: View {
     var body: some View {
         Rectangle()
             .foregroundColor(.clear)
@@ -74,9 +83,4 @@ struct ImageGradient: View {
     }
 }
 
-struct AppIcon: View {
-    var body: some View {
-        Image("screen2.1")
-            .frame(width: 400, height: 132, alignment: .leading)
-    }
-}
+
