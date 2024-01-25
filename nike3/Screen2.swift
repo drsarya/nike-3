@@ -28,7 +28,7 @@ struct Screen2: View {
                     Screen2ActionButton(text: "Get started")
                 }
                 .padding(.top, 550)
-            }2
+            }
             .frame(width: 400, height: 900, alignment: .top)
             .padding(.top, 80)
         }

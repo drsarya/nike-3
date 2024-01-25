@@ -15,6 +15,8 @@
 		4B51E1A82B606D3600406F4E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B51E1A72B606D3600406F4E /* Preview Assets.xcassets */; };
 		4B51E1AB2B606D3600406F4E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B51E1A92B606D3600406F4E /* LaunchScreen.storyboard */; };
 		4B51E1B32B60734900406F4E /* Screen2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B51E1B22B60734900406F4E /* Screen2.swift */; };
+		4BAB0C542B61E1BA004901EF /* ShopCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB0C532B61E1BA004901EF /* ShopCards.swift */; };
+		4BAB0C562B61E38A004901EF /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB0C552B61E38A004901EF /* ShopView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		4B51E1AA2B606D3600406F4E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B51E1AC2B606D3600406F4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B51E1B22B60734900406F4E /* Screen2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen2.swift; sourceTree = "<group>"; };
+		4BAB0C532B61E1BA004901EF /* ShopCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopCards.swift; sourceTree = "<group>"; };
+		4BAB0C552B61E38A004901EF /* ShopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				4B51E1A62B606D3600406F4E /* Preview Content */,
 				4B51E1B22B60734900406F4E /* Screen2.swift */,
 				4B1EB13D2B60902000B33DB0 /* ProductCard.swift */,
+				4BAB0C532B61E1BA004901EF /* ShopCards.swift */,
+				4BAB0C552B61E38A004901EF /* ShopView.swift */,
 			);
 			path = nike3;
 			sourceTree = "<group>";
@@ -153,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B51E19F2B606D3100406F4E /* AppDelegate.swift in Sources */,
+				4BAB0C542B61E1BA004901EF /* ShopCards.swift in Sources */,
+				4BAB0C562B61E38A004901EF /* ShopView.swift in Sources */,
 				4B51E1A12B606D3100406F4E /* SceneDelegate.swift in Sources */,
 				4B51E1B32B60734900406F4E /* Screen2.swift in Sources */,
 				4B1EB13E2B60902000B33DB0 /* ProductCard.swift in Sources */,

@@ -1,30 +1,16 @@
 //
-//  ProductCard.swift
+//  ShopCards.swift
 //  nike3
 //
-//  Created by darya on 23.01.2024.
+//  Created by darya on 24.01.2024.
 //  Copyright © 2024 darya. All rights reserved.
 //
 
 import SwiftUI
 
-
-struct ProductData: Hashable {
-    let id = UUID()
-    let image: String
-    let name: String
-    let description: String
-    let colors: String
-    let price: String
-    let isSoldOut: Bool
-}
-
-
-struct ProductCard: View {
-    
-    
-    
+struct ShopCards: View {
     var body: some View {
+        
         var images:[[ProductData]] = []
         _ = [
             ProductData(image: "screen2.2", name: "Critter", description: "Men Fleece Pullover", colors: "6 Colours", price: "US$60", isSoldOut: true),
@@ -38,7 +24,7 @@ struct ProductCard: View {
             
             ScrollView(.vertical) {
                 Color.clear
-                .navigationBarTitle("Best Sellers", displayMode: .inline)
+                    .navigationBarTitle("Best Sellers", displayMode: .inline)
                 ScrollView(.horizontal) {
                     HStack( spacing: 30) {
                         Text("yer")
@@ -52,11 +38,11 @@ struct ProductCard: View {
                             .fontWeight(.bold)
                     }
                 }.padding(.vertical, 20)
-
-
+                
+                
                 ForEach(0..<images.count, id: \.self) { array in
                     HStack{
-                        ForEach(images[array], id: \.self) {                 value in ProductCardView(imageData: value)
+                        ForEach(images[array], id: \.self) {                 value in ShopProductCardView(imageData: value)
                         }
                     }
                 }
@@ -65,14 +51,13 @@ struct ProductCard: View {
     }
 }
 
-
-struct ProductCard_Previews: PreviewProvider {
+struct ShopCards_Previews: PreviewProvider {
     static var previews: some View {
-        ProductCard()
+        ShopCards()
     }
 }
 
-struct ProductCardView: View {
+struct ShopProductCardView: View {
     var imageData: ProductData;
     var body: some View {
         VStack() {
@@ -87,10 +72,13 @@ struct ProductCardView: View {
                     .frame(maxWidth: 170, maxHeight:178 , alignment: .topTrailing)
             }
             
-            Text("Bestseller")
-            .font(Font.custom("Inter", size: 14).weight(.semibold))
-            .foregroundColor(Color(red: 0.937, green: 0.475, blue: 0.322))
-            .frame(maxWidth: .infinity, alignment: .leading)
+            if(imageData.isSoldOut){
+                Text("Sold Out")
+                    .font(Font.custom("Inter", size: 14).weight(.semibold))
+                    .foregroundColor(Color(red: 0.937, green: 0.475, blue: 0.322))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+            }
             Text(imageData.name)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Text(imageData.description)
@@ -106,18 +94,5 @@ struct ProductCardView: View {
     }
 }
 
-struct LikeButton: View {
-    
-    var body: some View {
-        Button (action: {}) {
-            ZStack {
-                Ellipse()
-                    .foregroundColor(.white)
-                    .frame(width: 28, height: 28)
-                Image("like")
-                    .foregroundColor(.black)
-            }
-        }
-    }
-}
+
 
