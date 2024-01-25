@@ -41,7 +41,7 @@ struct ProductCard: View {
                 .navigationBarTitle("Best Sellers", displayMode: .inline)
                 ScrollView(.horizontal) {
                     HStack( spacing: 30) {
-                        Text("yer")
+                        Text("Shoes")
                             .foregroundColor(.gray)
                             .fontWeight(.bold)
                         Text("Socks")
